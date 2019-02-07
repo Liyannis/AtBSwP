@@ -38,4 +38,42 @@ for x,y in grid([len(grid)], len(grid[1])):
     
 
 
-#rotate_clockwise_90()
+grid = [['0', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['8', '.', '.', '.', '.', '.']]
+
+'''
+first i need to loop through grid[8-0]
+while in that loop i need to grab only the first item from the list
+append that to a temp list
+grid[8][0]
+grid[x][y]
+'''
+x = reversed(range(len(grid)))
+y = range(len(grid[0]))
+
+for p in x:
+  #print(grid[r])
+  for i in grid[p]:
+    print(i)
+
+  
+
+'''
+for li in reversed(range(len(grid))): #listindex
+    tl=[] #templist
+    for char in grid[li]:
+        #print(char)
+        tl.append(char)
+        print(tl)
+        
+    turnedGrid=[]
+    turnedGrid.append(tl)
+print(turnedGrid)
+'''
