@@ -77,3 +77,9 @@ for li in reversed(range(len(grid))): #listindex
     turnedGrid.append(tl)
 print(turnedGrid)
 '''
+# teat at home
+
+for char in range(len(grid[0])):
+    for list in range(len(grid)):
+        print(char, list)
+        print(grid[list][char])
