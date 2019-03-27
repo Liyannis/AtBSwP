@@ -20,7 +20,7 @@ Total number of items: 62
 '''
 ################################################################################
 from random import randint
-#import prettyprint 
+import pprint 
 
 
 playerInventory = {}
@@ -33,7 +33,10 @@ lootTableMax = {'Gold Coin': 10, 'Silver Coin': 15, 'Copper Coin': 20,
              'Torch': 2, 'Arrow': 5, 
              }
 
-#def displayInventory():
+def displayInventory():
+    #pprint.pprint(playerInventory)
+    for k,v in playerInventory.items():
+        print(v, k)
     
 droppedLoot = {}
 droppedNumberOfLootItems = 3 #randint(0, len(lootTableMax))
@@ -53,7 +56,8 @@ if len(droppedLoot) == 0:
 else:
     print(str(len(droppedLoot)) + ' drops')
 
+#autoomaticaly pick up items
 print('you pick up the items')
-#print(droppedLoot)
-print('press anything to keep going?')
-print('or just press enter to exit')
+#move items from droppedLoot to playerInventory
+playerInventory = droppedLoot.copy()
+displayInventory()
