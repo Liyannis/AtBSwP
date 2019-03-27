@@ -25,35 +25,35 @@ from random import randint
 
 playerInventory = {}
 
-lootTable = ['Gold Coin', 'Silver Coin', 'Copper Coin',
-             'Torch', 'Arrow', 
-             ] 
+#lootTable = ['Gold Coin', 'Silver Coin', 'Copper Coin',
+#             'Torch', 'Arrow', 
+#             ] 
 
 lootTableMax = {'Gold Coin': 10, 'Silver Coin': 15, 'Copper Coin': 20,
              'Torch': 2, 'Arrow': 5, 
              }
 
-def displayInventory():
-    exit
+#def displayInventory():
     
 droppedLoot = {}
-droppedNumberOfLootItems = randint(0, len(lootTable))
+droppedNumberOfLootItems = 3 #randint(0, len(lootTableMax))
 #print(droppedNumberOfLootItems)#for debugging
 
 
 for n in range(droppedNumberOfLootItems):
-    droppedItem = lootTable[randint(0, len(lootTable)-1)]
+    droppedItem = list(lootTableMax.keys())[randint(0, len(lootTableMax)-1)]
     amount = randint(0, lootTableMax[droppedItem])
     if droppedItem not in droppedLoot:
         droppedLoot[droppedItem] = amount
     else:
         break
     
-if droppedLoot == 0:
+if len(droppedLoot) == 0:
     print('sorry ' + str(len(droppedLoot)) + ' drops')
 else:
     print(str(len(droppedLoot)) + ' drops')
 
-print(droppedLoot)
+print('you pick up the items')
+#print(droppedLoot)
 print('press anything to keep going?')
 print('or just press enter to exit')
