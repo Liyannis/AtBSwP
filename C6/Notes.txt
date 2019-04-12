@@ -1,0 +1,36 @@
+escape chars:
+	\'	single quote
+	\"	double quote
+	\t	tab
+	\n	newline (line break)
+	\\	backslash
+	
+raw strings:
+	print(r'example\'s')
+	
+multiline strings with triple quotes:
+	print('''something 
+			something
+			example''')
+	
+Multiline Comments:
+	"""comments
+	that explain"""
+
+Indexing and Slicing Strings:
+	strings are like lists in regards of indexing.
+	
+in and not in Operators with Strings:
+	case sensitive
+	evaluate to a boolean True or False
+	
+String Methods:
+	upper(), lower(), 
+	isupper(), islower()
+	isdecimal()
+	join(), split()
+	rjust(), ljust(), center()
+	
+	https://docs.python.org/3/library/stdtypes.html#string-methods
+
+	
